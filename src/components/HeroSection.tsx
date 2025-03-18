@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const handleDownloadResume = () => {
   // Replace '/path/to/yahya-cv.pdf' with the actual path to your PDF file
-  const pdfUrl = "./Cv_yahya.pdf";
+  const pdfUrl = "../../public/Cv_yahya.pdf";
   const link = document.createElement("a");
   link.href = pdfUrl;
   link.download = "yahya-cv.pdf"; // The name of the downloaded file
