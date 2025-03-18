@@ -73,16 +73,16 @@ const HeroSection = () => {
             </Button>
             
             <Button
-  className="w-full sm:w-auto group text-base"
-  variant="outline"
-  size="lg"
-  onClick={handleDownloadResume} // Add the onClick handler here
->
-  <div className="flex items-center">
-    <span className="font-mono mr-2">Click here to get my resume</span>
-    <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
-  </div>
-</Button>;
+              className="w-full sm:w-auto group text-base"
+              variant="outline"
+              size="lg"
+              onClick={handleDownloadResume}
+            >
+              <div className="flex items-center">
+                <span className="font-mono mr-2">Click here to get my resume</span>
+                <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
+              </div>
+            </Button>
           </div>
         </div>
       </div>
