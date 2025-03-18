@@ -42,9 +42,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact@example.com' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/velvetvi123' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/oubedda-yahya-2a6872285/' },
+    { name: 'Email', icon: Mail, href: 'mailto:yahya.oub@gmail.com' },
   ];
 
   return (

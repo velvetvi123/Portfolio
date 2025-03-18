@@ -3,6 +3,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const handleDownloadResume = () => {
+  // Replace '/path/to/yahya-cv.pdf' with the actual path to your PDF file
+  const pdfUrl = "./Cv_yahya.pdf";
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "yahya-cv.pdf"; // The name of the downloaded file
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const HeroSection = () => {
   const [visible, setVisible] = useState(false);
 
@@ -27,7 +38,7 @@ const HeroSection = () => {
         <div className="text-center">
           <div className={`transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="inline-block px-3 py-1 mb-6 rounded-full bg-secondary text-sm font-medium">
-              Full-Stack Developer
+              Software Engineer
             </div>
           </div>
           
@@ -45,12 +56,17 @@ const HeroSection = () => {
               <a href="#projects">View Projects</a>
             </Button>
             
-            <Button className="w-full sm:w-auto group text-base" variant="outline" size="lg">
-              <div className="flex items-center">
-                <span className="font-mono mr-2">$ wget yahya-cv.pdf</span>
-                <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
-              </div>
-            </Button>
+            <Button
+  className="w-full sm:w-auto group text-base"
+  variant="outline"
+  size="lg"
+  onClick={handleDownloadResume} // Add the onClick handler here
+>
+  <div className="flex items-center">
+    <span className="font-mono mr-2">Click here to get my resume</span>
+    <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
+  </div>
+</Button>;
           </div>
         </div>
       </div>

@@ -20,8 +20,8 @@ const timelineItems: TimelineItem[] = [
     id: 1,
     title: "Full Stack Developer",
     organization: "Blackswan Technology",
-    period: "2023 - Present",
-    location: "Remote",
+    period: "2024 - 2025",
+    location: "Casablanca, Morocco",
     description: [
       "Developed full-stack web applications using React, Node.js, and MongoDB",
       "Integrated Odoo ERP systems with custom web applications",
@@ -48,7 +48,7 @@ const timelineItems: TimelineItem[] = [
     id: 3,
     title: "Software Engineering Student",
     organization: "Holberton School",
-    period: "2021 - 2023",
+    period: "2023 - 2025",
     location: "Casablanca, Morocco",
     description: [
       "Completed intensive full-stack software engineering curriculum",
@@ -60,9 +60,9 @@ const timelineItems: TimelineItem[] = [
   },
   {
     id: 4,
-    title: "Industrial Systems Technician",
+    title: "Automated Systems Superior Technician",
     organization: "IFMIA Casablanca",
-    period: "2019 - 2021",
+    period: "2021 - 2023",
     location: "Casablanca, Morocco",
     description: [
       "Studied industrial automation, PLC programming, and electrical systems",

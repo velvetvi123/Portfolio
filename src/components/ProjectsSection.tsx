@@ -8,7 +8,11 @@ import {
   FileCode, 
   Terminal, 
   Code2, 
-  Database 
+  Database,
+  Stethoscope,
+  FileText,
+  BookOpen,
+  Cpu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -37,7 +41,7 @@ const projects: Project[] = [
     tech: ["C", "Linux", "Bash", "Git"],
     features: ["Command execution", "Environment variable handling", "Signal handling", "Builtin commands"],
     challenges: ["Process management", "Memory leaks prevention", "Signal handling implementation"],
-    github: "https://github.com",
+    github: "https://github.com/oussama7chaouki/simple_shell",
     icon: Terminal
   },
   {
@@ -48,9 +52,9 @@ const projects: Project[] = [
     tech: ["React", "Node.js", "MongoDB", "Express", "JWT"],
     features: ["User authentication", "CRUD operations", "Markdown support", "Commenting system"],
     challenges: ["User authentication flow", "Responsive design", "Real-time updates"],
-    github: "https://github.com",
+    github: "https://github.com/Outtacosmos-ai/TechBlog_MVP-Project",
     demo: "https://demo.example.com",
-    icon: FileCode
+    icon: FileText
   },
   {
     id: 3,
@@ -61,8 +65,8 @@ const projects: Project[] = [
     features: ["Patient records", "Appointment scheduling", "Billing management", "Medical imaging integration"],
     challenges: ["HIPAA compliance", "Complex database relationships", "Real-time notifications"],
     github: "https://github.com",
-    demo: "https://demo.example.com",
-    icon: Database
+    demo: "https://dentia-pro-landing.vercel.app/",
+    icon: Stethoscope
   },
   {
     id: 4,
@@ -73,7 +77,7 @@ const projects: Project[] = [
     features: ["Real-time monitoring", "Remote control", "Data visualization", "Automated workflows"],
     challenges: ["Hardware-software integration", "Real-time data processing", "Industrial protocols"],
     github: "https://github.com",
-    icon: Code2
+    icon: Cpu
   }
 ];
 
@@ -185,7 +189,7 @@ const ProjectsSection = () => {
         
         <div className={`mt-12 text-center transition-all duration-700 delay-500 transform ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <Button variant="outline" size="lg" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group">
+            <a href="https://github.com/velvetvi123" target="_blank" rel="noopener noreferrer" className="group">
               <span>More projects on GitHub</span>
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>

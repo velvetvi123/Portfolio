@@ -13,7 +13,8 @@ import {
   MapPin, 
   Linkedin, 
   Github, 
-  Twitter, 
+  Twitter,
+  Instagram,
   CheckCircle2
 } from "lucide-react";
 
@@ -75,8 +76,8 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+212 6XX XXX XXX",
-      href: "tel:+2126XXXXXXX"
+      value: "+212 619159531",
+      href: "tel:+212619159531"
     },
     {
       icon: MapPin,
@@ -90,17 +91,22 @@ const ContactSection = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com"
+      href: "https://www.linkedin.com/in/oubedda-yahya-2a6872285/"
     },
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com"
+      href: "https://github.com/velvetvi123"
     },
     {
       name: "Twitter",
       icon: Twitter,
       href: "https://twitter.com"
+    },
+    {
+      name : "Instagram",
+      icon: Instagram,
+      href: "https://www.instagram.com/real_velvetvic/"
     }
   ];
   
