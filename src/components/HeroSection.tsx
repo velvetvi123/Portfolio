@@ -2,16 +2,32 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download } from "lucide-react";
 import { useEffect, useState } from "react";
+import { toast } from "@/hooks/use-toast";
 
 const handleDownloadResume = () => {
-  // Replace '/path/to/yahya-cv.pdf' with the actual path to your PDF file
-  const pdfUrl = "../../public/Cv_yahya.pdf";
-  const link = document.createElement("a");
-  link.href = pdfUrl;
-  link.download = "yahya-cv.pdf"; // The name of the downloaded file
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  // The correct way to reference public files in production
+  const pdfUrl = "/Cv_yahya.pdf";
+  
+  try {
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "yahya-cv.pdf"; // The name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    toast({
+      title: "Resume download started",
+      description: "Your download should begin shortly.",
+    });
+  } catch (error) {
+    toast({
+      title: "Download failed",
+      description: "There was an error downloading the resume.",
+      variant: "destructive",
+    });
+    console.error("Download error:", error);
+  }
 };
 
 const HeroSection = () => {
@@ -57,16 +73,16 @@ const HeroSection = () => {
             </Button>
             
             <Button
-  className="w-full sm:w-auto group text-base"
-  variant="outline"
-  size="lg"
-  onClick={handleDownloadResume} // Add the onClick handler here
->
-  <div className="flex items-center">
-    <span className="font-mono mr-2">Click here to get my resume</span>
-    <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
-  </div>
-</Button>;
+              className="w-full sm:w-auto group text-base"
+              variant="outline"
+              size="lg"
+              onClick={handleDownloadResume}
+            >
+              <div className="flex items-center">
+                <span className="font-mono mr-2">Click here to get my resume</span>
+                <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
+              </div>
+            </Button>
           </div>
         </div>
       </div>
